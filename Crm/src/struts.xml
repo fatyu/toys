@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.objectFactory" value="spring" />
+	<include file="struts_zy.xml" />
+	<include file="struts_lk.xml" />
+	<!-- 登陆Action配置 -->
+	<package name="login" namespace="/admin" extends="struts-default">
+		<action name="loginManage" class="loginManageAction">
+			<result name="success">/jsp/index.jsp</result>
+			<result name="input">/jsp/message.jsp</result>
+		</action>
+	</package>
+	<!-- 简单的权限认证配置 -->
+	<package name="crm" namespace="/" extends="struts-default">
+		<action name="crm" class="crmAction">
+			<result name="groupsuccess" type="chain">
+				<param name="actionName">groupCustomerManage</param>
+				<param name="namespace">/admin</param>
+				<param name="method">list</param>
+			</result>
+
+			<result name="personsuccess" type="chain">
+				<param name="actionName">personCustomerManage</param>
+				<param name="namespace">/admin</param>
+				<param name="method">list</param>
+			</result>
+			<result name="carecustomersuccess">/jsp/admin/careManage/preSend.jsp
+			</result>
+			<result name="infosuccess" type="chain">
+				<param name="actionName">careInfoManage</param>
+				<param name="namespace">/admin</param>
+				<param name="method">list</param>
+			</result>
+			<result name="emplsuccess" type="chain">
+				<param name="actionName">employeeManage</param>
+				<param name="namespace">/admin</param>
+				<param name="method">list</param>
+			</result>
+			<result name="datasuccess">/jsp/admin/systemManage/data.jsp
+			</result>
+			<result name="companysuccess">/jsp/about.jsp</result>
+			<result name="preaddComplainsuccess">/jsp/admin/complainManage/add.jsp</result>
+			<result name="preupdateComplainsuccess">/jsp/admin/complainManage/preList.jsp</result>
+			<result name="backupsuccess">/jsp/admin/systemManage/preBackup.jsp</result>
+			<result name="importdatasuccess">/jsp/admin/systemManage/preImportData.jsp</result>
+			<result name="createchartsuccess">/jsp/admin/customerManage/preChart.jsp</result>
+			<result name="failed">/jsp/message.jsp</result>
+
+		</action>
+
+
+	</package>
+	<!--雇员Action的配置  -->
+	<package name="employee" namespace="/admin" extends="struts-default">
+		<action name="employeeManage" class="employeeManageAction">
+			<result name="listsuccess">/jsp/admin/systemManage/listEmployee.jsp</result>
+			<result name="updatesuccess">/jsp/message.jsp</result>
+			<result name="addsuccess">/jsp/message.jsp</result>
+			<result name="deletesuccess">/jsp/message.jsp</result>
+			<result name="deleteerror">/jsp/message.jsp</result>
+			<result name="detail">/jsp/admin/systemManage/detailEmployee.jsp
+			</result>
+			<result name="preupdate">/jsp/admin/systemManage/editEmployee.jsp</result>
+			<result name="input">/jsp/message.jsp</result>
+		</action>
+	</package>
+	<!-- 性别Action的配置  -->
+	<package name="sex" namespace="/admin" extends="struts-default">
+		<action name="sexManage" class="sexManageAction">
+			<result name="listsuccess">/jsp/admin/systemManage/detailSex.jsp</result>
+			<result name="preupdate">/jsp/admin/systemManage/editSex.jsp</result>
+			<result name="updatesuccess">/jsp/message.jsp</result>
+			<result name="input">/jsp/message.jsp</result>
+		</action>
+	</package>
+	<!--民族Action的配置  -->
+	<package name="nation" namespace="/admin" extends="struts-default">
+		<action name="nationManage" class="nationManageAction">
+			<result name="listsuccess">/jsp/admin/systemManage/detailNation.jsp</result>
+			<result name="preupdate">/jsp/admin/systemManage/editNation.jsp</result>
+			<result name="updatesuccess">/jsp/message.jsp</result>
+		</action>
+	</package>
+	<!--用户类别Action的配置  -->
+	<package name="customertype" namespace="/admin" extends="struts-default">
+		<action name="customerTypeManage" class="customerTypeManageAction">
+			<result name="listsuccess">/jsp/admin/systemManage/detailCustomerType.jsp
+			</result>
+			<result name="preupdate">/jsp/admin/systemManage/editCustomerType.jsp
+			</result>
+			<result name="updatesuccess">/jsp/message.jsp</result>
+			<result name="addsuccess">/jsp/message.jsp</result>
+			<result name="input">/jsp/message.jsp</result>
+		</action>
+	</package>
+</struts>
+	

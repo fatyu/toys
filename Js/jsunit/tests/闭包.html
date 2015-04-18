@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function closure(a, b, c) {
+            var ret = function (x) {
+                return Math.round(a * x * x + b * x + c);
+            }
+            ret.toString = function () {
+                //闭包调用外部的属性==相当于java中的内部类！
+                return a + "x^2+" + b + "x+" + c;
+            };//修改ret对象的toString方法
+            return ret;
+        }
+        var c2 = closure(4, 5, 4);
+        var c1 = closure(2, 3, 4);
+        document.write(c1 + "=" + c1(5) + "<br/>");
+        document.write(c2 + "=" + c2(5));
+        if(!("a" in window)){
+            var a = "zy";
+        }
+        document.write(this.URL+"<br/>");
+        document.write(window+"<br/>");
+        document.write(a+"<br/>");
+        //this.URL.createObjectURL("http://www.baidu.com");
+    </script>
+</head>
+<body>
+</body>
+</html>

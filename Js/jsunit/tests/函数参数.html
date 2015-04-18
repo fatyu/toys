@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>arguments</title>
+    <script type="text/javascript" src="yu.js"></script>
+    <script type="text/javascript">
+        //匹配参数
+        function dwargs(a, b) {
+            dw("【====================================================================】");
+            dw("调用函数：\t" + "dwargs(" + Array.apply(null, arguments) + ")");
+            dw("参数相加：\t" + (a + b));
+            dw("参数个数：\t" + arguments.length);
+            if (dwargs.length != arguments.length && arguments > 0) {//函数名.length 获得函数参数列表长度
+                throw new Error("参数不匹配！");
+            } else {
+                dw("参数是：\t" + "[" + a + "," + b + "]");
+            }
+        }
+
+        dwargs(true, false);
+        dwargs(14, 215, 5, 32, 35, 62, 7, 8, 9, 0);
+        dwargs("fat", "yu");
+        /*^^
+         *arguments有个重要的属性callee
+         * 它是指递归调用当前正在执行的函数！
+         * 使用callee计算n的阶乘
+         */
+        function calc(n) {
+            return n>1?n * arguments.callee(n - 1):1;
+        }
+        dw(calc(10));
+    </script>
+</head>
+<body>
+</body>
+</html>

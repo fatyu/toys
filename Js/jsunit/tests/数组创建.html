@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="yu.js"></script>
+    <script type="text/javascript">
+        /*new Array ===Array*/
+        var array = new Array();//无参创建 Array()
+        var array1 = new Array("zy","fatyu");//有参创建
+        //当使用有参创建时,当只有一个并且是数值的方式，是创建长度为第一个参数的数组，否则就是使用参数做为默认值的数组
+        var arr_only_argument = new Array(10);//创建长度为10的数组
+        var arr_only_argument_not_number = new Array("zy");//创建第一个值为zy的数组
+        var arrs = new Array(999999999);
+        dw(array);
+        dw(array1);
+        dw(arr_only_argument);
+        dw(arr_only_argument_not_number);
+        dw(arrs);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

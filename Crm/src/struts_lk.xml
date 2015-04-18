@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="customer" namespace="/admin" extends="struts-default">
+		<!-- 由spring进行管理 class只要写action的bean名称就可以 -->
+			<!--集团客户Action的配置  -->
+		<action name="groupCustomerManage" class="groupCustomerManageAction" >
+			<result name="listsuccess">/jsp/admin/customerManage/listGroupCustomer.jsp</result>
+			<result name="deletesuccess">/jsp/message.jsp</result>
+			<result name="deleteerror">/jsp/message.jsp</result>
+			<result name="addsuccess">/jsp/message.jsp</result>
+			<result name="updatesuccess">/jsp/message.jsp</result>
+			<result name="detail">/jsp/admin/customerManage/detailGroupCustomer.jsp</result>
+			<result name="preupdate">/jsp/admin/customerManage/editGroupCustomer.jsp</result>
+			<result name="input">/jsp/message.jsp</result>
+		</action>
+			<!-- 个人客户Action的配置  -->
+		<action name="personCustomerManage" class="personCustomerManageAction" >
+			<result name="listsuccess">/jsp/admin/customerManage/listPersonCustomer.jsp</result>
+			<result name="deletesuccess">/jsp/message.jsp</result>
+			<result name="deleteerror">/jsp/message.jsp</result>
+			<result name="addsuccess">/jsp/message.jsp</result>
+			<result name="updatesuccess">/jsp/message.jsp</result>
+			<result name="detail">/jsp/admin/customerManage/detailPersonCustomer.jsp</result>
+			<result name="preupdate">/jsp/admin/customerManage/editPersonCustomer.jsp</result>
+			<result name="input">/jsp/message.jsp</result>
+		</action>
+	</package>
+</struts>
+	

@@ -1,0 +1,14 @@
+数据库安装配置字符集编码为gbk
+用户名：root
+密码：root
+----------------------------
+创建数据库：
+dhcx.sql
+
+导入数据：
+1.cmd输入mysql -uroot -proot
+2.use dhcx
+3. 复制insert语句粘贴至cmd窗口
+dhcx_ryxx的insert语句可直接导入
+dhcx_xtyh是系统用户的数据.导入前请修改username和password
+

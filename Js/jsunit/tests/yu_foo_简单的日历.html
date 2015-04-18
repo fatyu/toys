@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>简单的日历</title>
+    <script type="text/javascript" src="yu.js"></script>
+    <script type="text/javascript">
+        var today = new Date();
+        var date = today.getDate();//获得当前日期
+        var month = today.getMonth() + 1;//月份从0开始
+        var year = today.getFullYear();//获得年份
+        var weeks = ["星期七", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+
+        dw(today);
+        dw(date);
+        dw(month);
+        dw(year);
+        dw(weeks[today.getDay()]);
+    </script>
+</head>
+<body>
+<div id="dt">
+    <script>setInterval(function () {
+
+        with (new Date())document.getElementById("dt").innerHTML = toLocaleString() + '星期' + '一二三四五六七'.charAt(getDay())
+    }, 1000)</script>
+
+</div>
+</body>
+</html>

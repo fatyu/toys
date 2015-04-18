@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>index.html</title>
+<style>
+#outer{width:500px;margin:0 auto;padding:0;text-align:center;}
+#ck{width:100px;height:100px;background:black;margin:10px auto;display:block;}
+</style>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <script type="text/javascript">
+        var changeStyle = function (elem, attr, value) {
+            elem.style[attr] = value;
+        };
+        function init() {
+            var inputs = document.getElementsByTagName("input");
+            var div_ck = document.getElementById("ck");
+            var operate = ['width','height','background','display','display'];
+            var value = ["400px","400px","green",'none',"block"];
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].index = i;//将元素索引位置置首位
+                inputs[i].onclick = function () {
+                    alert(div_ck.style.cssText);
+                    alert(this.index == inputs.length - 1 && (div_ck.style.cssText = ""));//淫荡的&&！！
+                    this.index == inputs.length - 1 && (div_ck.style.cssText = "");
+                    changeStyle(div_ck, operate[this.index], value[this.index]);
+                }
+            }
+        }
+
+    </script>
+</head>
+<body onload="init();">
+<div id="outer">
+    <input type="button" value="加宽">
+    <input type="button" value="加高">
+    <input type="button" value="变色">
+    <input type="button" value="隐藏">
+    <input type="button" value="重置">
+
+    <div id='ck'></div>
+</div>
+</body>
+</html>

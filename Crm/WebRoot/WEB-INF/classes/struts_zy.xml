@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+	"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!-- 关怀信息Action的配置 -->
+	<package name="careinfo" namespace="/admin" extends="struts-default">
+		<!-- 由spring进行管理 class只要写action的bean名称就可以 -->
+		<action name="careInfoManage" class="careInfoManageAction">
+			<result name="listsuccess">/jsp/admin/careManage/listCare.jsp</result>
+			<result name="detail">/jsp/admin/careManage/detailCare.jsp</result>
+			<result name="deletesuccess">/jsp/message.jsp</result>
+			<result name="deleteerror">/jsp/message.jsp</result>
+			<result name="checksuccess">/jsp/admin/careManage/sendCare.jsp</result>
+			<result name="nocustomer">/jsp/message.jsp</result>
+			<result name="sendsuccess">/jsp/message.jsp</result>
+			<result name="input">/jsp/message.jsp</result>
+		</action>
+	</package>
+
+	<!-- 投诉信息Action的配置 -->
+	<package name="complain" namespace="/admin" extends="struts-default">
+		<!-- 由spring进行管理 class只要写action的bean名称就可以 -->
+		<action name="complainManage" class="complainManageAction">
+			<result name="addsuccess">/jsp/message.jsp</result>
+			<result name="deletesuccess">/jsp/message.jsp</result>
+			<result name="deleteerror">/jsp/message.jsp</result>
+			<result name="failed">/jsp/message.jsp</result>
+			<result name="listclearsuccess">/jsp/admin/complainManage/listClearComplain.jsp
+			</result>
+			<result name="detail">/jsp/admin/complainManage/detail.jsp</result>
+			<result name="preupdate">/jsp/admin/complainManage/update.jsp</result>
+			<result name="updatesuccess">/jsp/message.jsp</result>
+			<result name="listunclearsuccess">/jsp/admin/complainManage/listUnclearComplain.jsp
+			</result>
+		</action>
+	</package>
+
+	<!-- 备份客户信息的配置 -->
+	<package name="backexcel" namespace="/admin" extends="struts-default">
+		<!-- 由spring进行管理 class只要写action的bean名称就可以 -->
+		<action name="generateExcel" class="generateExcelAction">
+			<result name="success" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="contentDisposition">filename="backup.xls"</param>
+				<param name="inputName">downloadExcel</param>
+			</result>
+		</action>
+	</package>
+
+	<package name="importexcel" namespace="/admin" extends="struts-default">
+		<!-- 由spring进行管理 class只要写action的bean名称就可以 -->
+		<action name="importExcel" class="generateDBFromExcelAction">
+			<result name="success">/jsp/message.jsp
+			</result>
+				<result name="importerror">/jsp/message.jsp
+			</result>
+		</action>
+	</package>
+	
+	<package name="chartexport" namespace="/" extends="jfreechart-default">
+		<action name="chartexport" class="chartAction">
+			<result name="success" type="chart">
+				<param name="value">chart</param>
+				<param name="type">png</param>
+				<param name="width">640</param>
+				<param name="height">480</param>
+			</result>
+		</action>
+	</package>
+
+</struts>
+	

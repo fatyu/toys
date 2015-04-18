@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>奇特的函数</title>
+    <script type="text/javascript" src="yu.js"></script>
+    <script type="text/javascript">
+        function Fib(n, x, y) {
+            var a = x || 1;
+            var b = y || 1;
+            if (n == 0)b = a;
+            var t = 0;
+            for (var i = 2; i <= n + 1; i++) {
+                t = b;//1 2 3
+                b = b + a;//2 3 5
+                a = t;//2 2 3
+            }
+            var ret = function (n, x, y) {
+                x = x || a;
+                y = y || b;
+                return Fib(n, x, y);
+            }
+            ret.valueOf = ret.toString = function () {
+                //dw(this);导致死循环
+                return a;
+            }
+            return ret;
+        }
+        var f6 = Fib(6);
+        dw(f6);
+        dw(f6(2));
+        function f (){
+            //alert(1);
+            return f;
+        }
+        dw(f()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

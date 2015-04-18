@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="yu.js"></script>
+    <script type="text/javascript">
+        //数组的长度可以改变。只有操作length属性值才能修改删除数组中的数据，delete不能达到修改长度的效果
+        var arr = new Array("zy", "fatyu", "yu");
+        dw(arr);
+        delete arr[2];
+        dw(arr);//值被删除，但是长度不变
+        arr.length = 2;
+        dw(arr);//长度变化，值也被删除
+        //Array是一种先进后出的栈型数据结构
+        //正确使用push和pop方法来对数组进行添加和删除
+        //pop和push始终从最后一个元素开始操作
+        //shift-->pop() unshift-->push使用从第一个元素开始操作
+        //四种方法交叉使用可以实现队列【先进先出】和堆栈【先进后出】两种数据结构
+//=======================================================================================================
+        //join方式是用来将数组中的元素拼接成字符串
+        var strBuffer = ["z","y","滚蛋"];
+        var result1= strBuffer.join();//默认使用逗号进行分割
+        var result2= strBuffer.join("y");//默认使用逗号进行分割
+        dw(result1);
+        dw(result2);
+        //reserve()将数组中的元素进行倒序排列
+        //sort()将数组进行排序，参数可以是一个闭包函数
+        //strBuffer.slice();
+        //strBuffer.splice();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

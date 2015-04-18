@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>加载顺序</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <noscript>您的浏览器不支持JavaScript,请开启浏览器的JavaScript功能!</noscript>
+    <script type="text/javascript">
+        function ArrayList(array) {
+            this._arr = typeof(array) == "string" ? array.split(",") : array;
+        }
+        ArrayList.prototype.$each = function (closure) {
+            var ret = [];
+            for (var i = 0; i < this._arr.length; i++) {
+                ret.push(closure.call(this, this._arr[i]));
+                /*
+                function (a) {
+                    return parseFloat(a) + parseFloat(num);
+                } call();
+                */
+            }
+            return ret;
+
+        }
+        ArrayList.prototype.add = function (num) {
+            return this.$each(function (a) {
+                return parseFloat(a) + parseFloat(num);
+            });
+        }
+        ArrayList.prototype.multiply = function (num) {
+            return this.$each(function (a) {
+                return parseFloat(a) * parseFloat(num);
+            });
+        }
+        /**
+         * [1,2,3,4,5]. each(
+         *
+         *     function (a) {
+                         return parseFloat(a) + parseFloat(2);
+                     }
+         *
+         * )
+         */
+    </script>
+</head>
+<body>
+<input id="list" value="1,2,3,4,5" type="text">
+<input id="num" value="2" type="text">
+<input value="Add" type="button"
+       onclick="document.getElementById('result').value=new ArrayList(document.getElementById('list').value).add(document.getElementById('num').value);">
+<!--<input value="Multiply" type="button"-->
+       <!--onclick="document.getElementById('result').value=new ArrayList(document.getElementById('list').value).multiply(document.getElementById('num').value);">-->
+<input type="text" id="result">
+</body>
+</html>

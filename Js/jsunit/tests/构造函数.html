@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="yu.js"></script>
+    <script type="text/javascript">
+        function test() {
+            this.tt = "zhangyu";
+            /*当返回值是一个引用类型--函数 对象 数组时 使用new创建的对象中的this属性全部丢失*/
+            return function () {
+                alert("zy");
+            }
+        }
+
+        var a = test();
+        var b = new test();
+        dw(a);
+        dw(b);
+        dw(a.tt);
+        dw(b.tt);
+        function test1() {
+            this.tt = "zhangyu";
+            /*当返回值是值时 使用new创建的对象中的this不会丢失 返回值和return没有关系。 */
+            return "z";
+        }
+
+        var c = test1();
+        var d = new test1();
+        dw(c);
+        dw(d);
+        dw(c.tt);
+        dw(d.tt);
+        /************************************************************************************************/
+        function Double(value) {
+            value = parseFloat(value);//将value转换为double类型
+            //如果是作为构造函数执行，那么满足this.constructor == arguments.callee
+            //这个时候构造一个Double对象，给出doubleValue()和valueOf()方法
+            if (!isNaN(value) && this && this.constructor == arguments.callee) {
+                this.doubleValue = function () {
+                    return value;
+                };
+                this.valueOf = function () {
+                    return value;
+                };
+                this.toString = function () {
+                    return value.toString();
+                };
+
+            }else{
+                return value;
+            }
+        }
+        dw("使用new！"+new Double("1000").doubleValue());
+        dw("new 创建的类型<font color='red'>"+typeof new Double(100)+"</font>");
+        //dw("使用new！"+Double(100).doubleValue());//因为Double（）不是调用构造函数.对象没有doubleValue方法
+        dw("不使用new！"+Double("100"));
+        dw("不使用new 创建的类型<font color='red'>"+typeof Double(100)+"</font>");
+        /*note
+        * :使用new创建对象可以不使用括号
+        * var obj = new Object;
+        * */
+    </script>
+</head>
+<body>
+
+</body>
+</html>

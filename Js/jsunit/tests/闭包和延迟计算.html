@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        var $_fun_a = function() {
+            var s = 0;
+            for (var i = 0; i <= 10; i++) {
+                s = s + i;
+            }
+            return s;
+        }
+        var $_fun_b = function() {
+            var s = "a";
+            for (var i = 0; i <= 5; i++) {
+                s = s + i;
+            }
+            return s;
+        }
+        var randomInvoke = function (f1, f2) {
+            alert(f1);
+            alert(f2);
+            var rannum = Math.random();
+            if (rannum > 0.5)
+                return f1();
+            return f2();
+        }
+       document.write(randomInvoke($_fun_a, $_fun_b));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

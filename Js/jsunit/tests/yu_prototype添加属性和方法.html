@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>prototype函数和属性</title>
+    <script type="text/javascript">
+
+        function User(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        User.say = function (str) {
+            document.write(this.name + str + "<br/>")
+        };//this调用User类的名字
+        User.prototype.eat = function (food) {
+            document.write(this.name + "吃" + food + "了！<br/>")
+        };//this调用实例对象中的name
+
+        var user = new User("zhangyu", 24);
+        //user.say("说！");//user无此方法.没有使用prototype添加的say方法只有对象类才能调用！
+        alert(user.say);//undefined!
+        user.eat("apple");//
+        //User.eat("ipad2");//User无此方法，使用prototype方式添加的只有对象实例才能访问。
+        alert(User.eat);
+        User.say(":say___");
+
+        //删除对象中的属性或者方法只有使用delete进行删除
+        delete User.name;
+        delete user.name;
+        document.write("name" in User);
+        document.write("<hr/>");
+        document.write("age" in User);
+        document.write("<hr/>");
+        document.write("name" in user);
+        document.write("<hr/>");
+        document.write("age" in user);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

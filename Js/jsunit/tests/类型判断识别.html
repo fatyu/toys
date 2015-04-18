@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>类型判断识别</title>
+    <script type="text/javascript">
+        //修改Object的原型，添加istypeof方法
+        Object.prototype.isTypeOf = function (type) {
+            try {
+                return typeof(this) === type || this instanceof type || this.constructor === type;
+            } catch (e) {
+                alert(e);
+            }
+        }
+        var obj1 = new Object();
+        document.write(obj1.isTypeOf(Object)+"<br/>");
+        var obj2 = new Array();
+        document.write(obj2.isTypeOf(Array)+"<br/>");
+        var obj3 = new Number(1119);
+        document.write(obj3.isTypeOf(Number)+"<br/>");
+        var obj4 = new String("yu");
+        document.write(obj4.isTypeOf(String)+"<br/>");
+        var obj5 = "zy";
+        document.write(obj5.isTypeOf(String)+"<br/>");
+        var obj5 = ["zy"];
+        document.write(obj5.isTypeOf(Array)+"<br/>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        var obj = new Object();
+        obj.x = 10;
+        obj.y = 20;
+        obj.computerArea = function () {
+            return Math.round(this.x * this.y);
+        }
+        alert(obj.computerArea());
+        alert(obj.computerArea);
+
+        var point = function (x, y) {
+            this.x = x;
+            this.y = y;
+            this.computerArea = function () {
+                return Math.round(this.x * this.y);
+            }
+            this.toString = function () {
+                return "[x:" + this.x + "\t," + "y:" + this.y + "]";
+            }
+        }
+        var p1 = new point(2, 3);
+        var p1 = new point(4, 5);
+        var $dw = function (o) {
+            document.write(o);
+        };
+        $dw(p1);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

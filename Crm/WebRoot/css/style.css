@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* Sohu Bai Style Sheet
+ * Page: Help
+ * Created: 2009-01-16
+ * Update: 2009-08-06
+ * Author: Matt Wang
+ * Copyright: Sohu.com Inc.
+ */
+
+
+/*** Canvas Reset ***/
+.canvas th,
+.canvas td{border:1px solid #999;padding:4px 10px;}
+
+
+/*** Basic Classes ***/
+
+/* Link */
+a{color:#447d9d;}
+
+/* ul.square */
+ul.square{margin:0;list-style:none;}
+ul.square li{margin:3px 0;padding:0 0 0 16px;background:url(i/li-square.gif) no-repeat -2px 2px;font:400 12px/20px Arial,sans-serif;}
+
+/* ul.doubly */
+ul.doubly{margin:0;list-style:none;zoom:1;}
+ul.doubly li:after{content:'\0020';display:block;clear:both;height:0;}
+	ul.doubly li{/*fixed*/}
+	ul.doubly li .title{float:left;}
+	ul.doubly li .info{float:right;}
+
+
+/*** Framework ***/
+
+/* Core Layout */
+#navbar{left:25px;}
+#page{left:25px;}
+
+/* page */
+#pageHd{padding:10px 0;}
+
+/* appbar */
+#appbarHelps{margin:0 0 0 -10px;}
+	#appbarHelps a{outline:none;}
+	#appbarHelps ul{overflow:hidden;margin:0;}
+		#appbarHelps li{_display:inline;padding:5px 0 5px 10px;zoom:1;}
+			#appbarHelps a.appName{display:block;height:16px;padding:2px 0 2px 16px;padding:4px 0 0 16px\9;background:url(i/appName.gif) 0 0 no-repeat;color:#376B88; font:700 12px/16px Verdana,Geneva,sans-serif;}
+			#appbarHelps a:hover{text-decoration:none;}
+			#appbarHelps li ul{display:none;padding:5px 0 0;}
+				#appbarHelps li li{padding:0;}
+					#appbarHelps li li a{display:block;height:20px;padding:4px 5px 4px 16px;padding:5px 5px 3px 16px\9;background:url(i/appbar-item.gif) -999px -999px no-repeat;color:#748E9C;}
+					#appbarHelps li li a:hover{background:url(i/appbar-item.gif) 50% 50% no-repeat;}
+		#appbarHelps li.on{}
+			#appbarHelps li.on a.appName{background-position:0 -120px;}
+			#appbarHelps li.on a.noSub{background-position:0 -80px;}
+			#appbarHelps li.on ul{display:block;}
+				#appbarHelps li.on li a{cursor:pointer;}
+				#appbarHelps li li.on{background:url(i/appbar-item.gif) 50% 50% no-repeat;}
+				#appbarHelps li li.on a{cursor:default;}
+
+
+/*** page-help layout ***/
+#page-help{}
+
+.helpItem{margin:10px 0;}
+	.helpTitle{padding:7px 12px;background:#f6f9fb;zoom:1;}
+	.helpTitle:after{content:'\0020';display:block;clear:both;height:0;}
+		.helpTitle h2{float:left;margin:0;color:#376b88;font:700 14px/20px Verdana,Geneva,sans-serif;}
+		.helpTitle .option{float:right;color:#8ea6b6;}
+			.helpTitle .option a{color:#8ea6b6;}
+	.helpContent{padding:10px 12px;}
+
+.guideBox{margin:0 0 0 4px;background:url(i/guideBox-b.png) 100% 0;}
+	.guideBoxBd{padding:0 10px 0 0;background:url(i/guideBox-h.png) 100% 0 no-repeat;}
+		.guideBoxBdMid{background:url(i/guideBox-b.png) 0 0;}
+			.guideBoxBdInt{min-height:160px;_height:160px;padding:10px 0 0 10px;background:url(i/guideBox-h.png) 0 0 no-repeat;zoom:1;}
+				.guideBox table{margin:0;}
+				.guideBox td{padding:0 5px 0 15px;border:1px solid #dfe9ee;border-width:0 1px 0 0;vertical-align:top;}
+				.guideBox td.end{border:0;}
+				.guideBox h2{margin:0.8em 0;}
+				.guideBox li{margin:8px 0 !important;}
+	.guideBoxFt{display:block;padding:0 10px 0 0;background:url(i/guideBox-f.png) 100% 100%;}
+		.guideBoxFtInt{overflow:hidden;height:10px;padding:0 0 0 10px;background:url(i/guideBox-f.png) 0 100%;font:0/0 sans-serif;}

@@ -1,0 +1,7 @@
+create user stock identified by stock;
+
+create tablespace ts_stock datafile 'E:\ThunderDownload\stock-data.dbf' size 1024M;
+
+alter user stock default tablespace ts_stock ;
+
+grant create session,create table,create view,unlimited tablespace to stock;

@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>标记-break-continue</title>
+    <script type="text/javascript">
+        function dw(str){
+            document.writeln(str+"<br/>")
+        }
+        dw("无标记:");
+        for(var i=1;i<3;i++){
+            for(var j=1;j<3;j++){
+                for(var k=1 ;k<3;k++){
+                    if(i+j+k<4) {
+                        break;
+                    }
+                    dw([i, j, k]);
+                }
+            }
+
+        }
+        dw("有标记:");
+        for(var i=1;i<3;i++){
+           x: for(var j=1;j<3;j++){
+                for(var k=1 ;k<3;k++){
+                    if(i+j+k<4) {
+                        break x;
+                    }
+                    dw([i, j, k]);
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

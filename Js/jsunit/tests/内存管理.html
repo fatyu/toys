@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="yu.js"></script>
+    <script type="text/javascript">
+        /*js中 内存管理机制使用引用计数方式来进行管理*/
+        //Note：由于循环可能会导致循环引用。
+        //在ie中可以使用CollectGarbage()进行垃圾收集
+        //使用闭包会导致应用不能被释放,只有调用闭包的对象==null后，闭包引用的参数才会被释放.
+        function test(a){
+            return function(){
+                return a;//在闭包中被引用,即使test函数调用结束后，a也不会被gc！只有将调用test的对象置空后a才能被收集
+            }
+        }
+        var test1 = test(1);
+        var test2 = test(2);
+        //此时a的引用还未被释放
+        test1 = null;
+        test2 = null;//这时a的引用就会被收集！
+    </script>
+</head>
+<body>
+
+</body>
+</html>

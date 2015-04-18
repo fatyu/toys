@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>函数所有者和调用者</title>
+
+    <script type="text/javascript">
+        /**函数的调用者*/
+        //[Function.caller]用于获得函数调用者。不过它不是ECMAScript规范
+        /**函数的所有者*/
+            //要作为函数的所有者，只需将函数的引用做为所有者的一个属性即可。
+
+            //1.定义一个point对象和一个vector对象
+        function Point(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+        function Vector(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        //2.定义一个函数
+        function fun() {
+            document.write(this.constructor);
+        }
+        //3.实例化对象
+        var point = new Point(2, 2);
+        var vector = new Vector(3, 3);
+        point.fun = fun;
+        point.fun();//point 是fun函数的所有者
+        vector.fun = fun;
+        vector.fun();//vector 是fun函数的所有者
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function Point(x,y){
+            this.x  = x;
+            this.y  = y;
+            this.toString=function(){
+                return "point's x is "+x+",point's y is "+y+".";
+            }
+
+        }
+        function Vector(x,y){
+            this.x  = x;
+            this.y  = y;
+            this.toString=function(){
+                return "vector's x is "+x+",vector's y is "+y+".";
+            }
+        }
+
+        function add(x,y){
+            return  new this.constructor(this.x+x, this.y+y);//this.x和this.y 是指调用add方法的那个对象
+        }
+
+        var p =new Point(2,2);
+        var p1 = add.call(p,4,5);//call可以跟多个参数
+        var p2 = add.apply(p,[4,5,5]);//apply使用一个数组
+        var v =new Vector(4,5);
+        var v1 = add.call(v,6,7);//call可以跟多个参数
+        var v2 = add.apply(v,[4,5,5]);//apply使用一个数组
+        document.write(p+"<br/>");
+        document.write(p1+"(4,5)<br/>");
+        document.write(p2+"[4,5]<br/>");
+document.write("======================================================="+"<br/>");
+        document.write(v+"<br/>");
+        document.write(v1+"(6,7)<br/>");
+        document.write(v2+"[4,5]<br/> ");
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

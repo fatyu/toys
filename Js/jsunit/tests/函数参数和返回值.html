@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function dw(s) {
+            document.write(s + "<br/>")
+        }
+
+        function trans(list, opt) {
+            for (var i = 0; i < list.length; i++) {
+
+                list[i] = opt(list[i]);
+            }
+        }
+        var list = [1, 2, 3, 4];
+        trans(list, function (x) {
+            return x + 1
+        });
+        dw(list);//此时的list已经发生变化
+        trans(list, function (x) {
+            return x * x
+        });
+        dw(list);
+        //累加器 --》java中的链模式
+        function add(a, b) {
+            var b = b || 0;
+            var s = a + b;
+            var ret = function (a) {
+                return add(a, s);
+            }
+            ret.valueOf = ret.toString = function () {
+                return s;
+            }
+            return ret;
+        }
+        dw(add(1)(2)(3));
+    </script>
+</head>
+<body>
+</body>
+</html>

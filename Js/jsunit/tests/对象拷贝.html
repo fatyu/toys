@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="yu.js"></script>
+    <script type="text/javascript">
+        function User(id, xm) {
+            this.id = id;
+            this.xm = xm;
+            this.toString = function () {
+
+                return this.id + ", xm is " + this.xm;
+            }
+            //使用闭包，创建自动克隆的能力
+            this.clone = function () {
+                return new User(id, xm);
+            }
+        }
+        var u1 = new User(1, "zhangyu");
+        var u2 = u1;//引用传递 改变u2的值将会改变u1的值
+
+        function objCopy(id, xm) {
+            if (arguments[0] instanceof User) {
+                this.id = arguments[0].id;
+                this.xm = arguments[0].xm;
+            } else {
+                this.id = id;
+                this.xm = xm;
+            }
+        }
+
+        var u3 = new objCopy(u1);
+        u3.xm = "fatyu";
+        var u4 = u1.clone();
+        u4.xm = "u4_fatyu";
+        dw(u3.xm);
+        dw(u1);
+        dw(u4.xm);
+        dw(u1);
+        u2.xm = "zy";
+        dw(u2);
+        dw(u1);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- 打开用注释进行Bean的注入,@Resource和@Autowire -->
+	<context:annotation-config />
+	
+	<!-- 指定查找包的基包 -->
+	<context:component-scan base-package="com.crm" />
+
+<!-- 配置数据源 当数据库连接不使用的时候，就把该连接重新放到数据池中 -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="org.gjt.mm.mysql.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/crm?useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+		<!-- 连接池启动时的初始值 -->
+		<property name="initialSize" value="1" />
+		<!-- 连接池的最大值 -->
+		<property name="maxActive" value="500" />
+		<!-- 最大空闲值.当经过一个高峰时间后，连接池可以慢慢将已经用不到的连接慢慢释放一部分，一直减少到maxIdle为止 -->
+		<property name="maxIdle" value="2" />
+		<!--  最小空闲值.当空闲的连接数少于阀值时，连接池就会预申请去一些连接，以免洪峰来时来不及申请 -->
+		<property name="minIdle" value="1" />
+	</bean>
+	<!-- 配置sessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mappingDirectoryLocations">
+			<value>classpath:/com/crm/entity/</value>
+		</property>
+		<property name="hibernateProperties">
+			<value>
+			<!-- 指定hibernate方言 -->
+				hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+			<!-- 指定hibernate由配置文件创建数据库的方式为'更新'-->
+				hibernate.hbm2ddl.auto=update
+				<!-- 指定hibernate在控制台输出sql语句-->
+				hibernate.show_sql=true
+				<!-- 指定hibernate进行输出的sql语句格式化 -->
+				hibernate.format_sql=true
+		      </value>
+		</property>
+	</bean>
+	<!-- 配置对sessionFactory事务管理 -->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="txManager" />
+
+	<!-- Service的配置 -->
+	<!-- 使用注解在此不需要配置 bean的名称为service的类的首字母小写-->
+
+
+	<!-- Action的配置 -->
+	<!--由@Control注解完成配置-->
+</beans>

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>字符串</title>
+    <script type="text/javascript">
+        var str ="www.fatyu.org";
+        var index = str.indexOf(".");
+        document.write(str.substring(index+1)+"<br/>");
+        var arr_str = str.split(".");
+        document.write(arr_str+"<br/>");
+        index = str.search("fatyu");
+        document.write(index+"<br/>");
+        var str1 = str.replace("fatyu","胖子鱼");
+        document.write("替换后的str："+str+"<br/>");
+        document.write(str1+"<br/>");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

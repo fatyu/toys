@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" defer="defer" >
+        function A() {
+            alert(1);
+        }
+        A();
+        function A() {
+
+            alert(2);
+        }
+        A();
+        A=function () {
+
+            alert(3);
+        }
+        A();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
