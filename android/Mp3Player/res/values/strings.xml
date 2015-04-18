@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mp3播放器</string>
+    <string name="mp3list_update">更新列表</string>
+    <string name="mp3list_about">关于</string>
+    <string name="mp3list_about_string">作者:张羽\n时间:2010-11-22</string>
+</resources>

@@ -1,0 +1,35 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.12.08.09.10.54;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	ff84cff4b9d4c15;
+filename	org.eclipse.jdt.core.prefs;
+
+
+desc
+@@
+
+
+1.1
+log
+@mp3web·þÎñ
+@
+text
+@#Tue Nov 23 10:17:03 CST 2010
+eclipse.preferences.version=1
+org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.5
+org.eclipse.jdt.core.compiler.compliance=1.5
+org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
+org.eclipse.jdt.core.compiler.problem.enumIdentifier=error
+org.eclipse.jdt.core.compiler.source=1.5
+@

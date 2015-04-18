@@ -1,0 +1,37 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.12.08.09.09.28;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	ca84cff4b474afc;
+filename	strings.xml;
+
+
+desc
+@@
+
+
+1.1
+log
+@�ռ�
+@
+text
+@<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">数据库操作例2</string>
+    <string name="menu_insert">添加一篇新日记</string>
+    <string name="menu_delete">删除一篇日记</string>
+    <string name="title">标题</string>
+    <string name="body">内容</string>
+    <string name="confirm">确定</string>
+    <string name="edit_diary">编辑日记</string>
+</resources>@

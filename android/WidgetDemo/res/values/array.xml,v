@@ -1,0 +1,39 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.12.08.09.13.53;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	93c4cff4c514e61;
+filename	array.xml;
+
+
+desc
+@@
+
+
+1.1
+log
+@widget
+@
+text
+@<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string-array name="langs">
+	<item>JAVA</item>
+	<item>CPP</item>
+	<item>PYTHON</item>
+	<item>RUBY</item>
+	<item>GROOVY</item>
+
+</string-array>
+</resources>
+@

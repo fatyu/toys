@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+
+	<RadioGroup android:id="@+id/menu" android:checkedButton="@+id/java"
+		android:orientation="vertical" android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<RadioButton android:text="java" android:id="@+id/java" />
+		<RadioButton android:text="cpp" android:id="@+id/cpp" />
+		<RadioButton android:text="python" android:id="@+id/python" />
+	</RadioGroup>
+	<Button android:id="@+id/clear_button" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="ClearSelected" />
+</LinearLayout>

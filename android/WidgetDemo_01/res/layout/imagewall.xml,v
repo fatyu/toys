@@ -1,0 +1,41 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.12.08.09.14.06;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	cb04cff4c5e4e8b;
+filename	imagewall.xml;
+
+
+desc
+@@
+
+
+1.1
+log
+@widget
+@
+text
+@<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+	<ImageSwitcher android:id="@@+id/switcher"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:layout_alignParentTop="true" android:layout_alignParentLeft="true" />
+
+	<Gallery android:id="@@+id/gallery" android:background="#55000000"
+		android:layout_width="fill_parent" android:layout_height="60dp"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true" android:gravity="center_vertical"
+		android:spacing="16dp" />
+</RelativeLayout>@

@@ -1,0 +1,45 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.12.08.09.12.31;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	ad44cff4bff4d55;
+filename	main.xml;
+
+
+desc
+@@
+
+
+1.1
+log
+@sqlite ����
+@
+text
+@<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<TextView android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="@@string/hello" />
+	<Button android:text="创建数据库" android:id="@@+id/Button01"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+	<Button android:text="删除表" android:id="@@+id/Button02"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+	<Button android:text="插入数据" android:id="@@+id/Button03"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+	<Button android:text="删除数据" android:id="@@+id/Button04"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+	<Button android:text="查询数据数目" android:id="@@+id/Button05"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+</LinearLayout>
+@

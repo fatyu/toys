@@ -1,0 +1,33 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.12.08.09.14.07;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	cb04cff4c5e4e8b;
+filename	strings.xml;
+
+
+desc
+@@
+
+
+1.1
+log
+@widget
+@
+text
+@<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">This application is maked by fatyu...</string>
+    <string name="app_name">WidgetDemo</string>
+</resources>
+@

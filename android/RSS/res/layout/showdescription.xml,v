@@ -1,0 +1,49 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.12.08.09.11.28;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	eac4cff4bc04c87;
+filename	showdescription.xml;
+
+
+desc
+@@
+
+
+1.1
+log
+@rss reader
+@
+text
+@<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:autoLink="all"
+    android:text=""
+    android:id="@@+id/content"
+    android:layout_weight="1.0"
+    />
+<Button
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:text="返回"
+	android:id="@@+id/back"
+	/>     
+</LinearLayout>
+@

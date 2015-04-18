@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content" >
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<Button android:id="@+id/button" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="这是一个按钮" />
+
+	<Button android:id="@+id/text_view_button" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="TextView" />
+
+	<Button android:id="@+id/edittext_view_button"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="EditTextView" />
+	<Button android:id="@+id/checkbox_button" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="checkboxView" />
+
+	<Button android:id="@+id/radio_button" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="radioView" />
+	<Button android:id="@+id/select_button" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="SpinnerView" />
+	<Button android:id="@+id/autocompletetext_button"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="AutoCompleteTextView" />
+
+	<Button android:id="@+id/date_picker_button"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="DatePicker" />
+	<Button android:id="@+id/time_picker_button"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="TimePicker" />
+		
+			<Button android:id="@+id/nothing"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:text="Nothing" />
+
+</LinearLayout>
+</ScrollView>

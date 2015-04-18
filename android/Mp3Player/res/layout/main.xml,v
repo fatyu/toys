@@ -1,0 +1,40 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.12.08.09.11.11;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	d2c4cff4baf4c50;
+filename	main.xml;
+
+
+desc
+@@
+
+
+1.1
+log
+@mp3²¥·ÅÆ÷.
+@
+text
+@<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@@android:id/tabhost" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:padding="5dp">
+		<TabWidget android:id="@@android:id/tabs"
+			android:layout_width="fill_parent" android:layout_height="wrap_content" />
+		<FrameLayout android:id="@@android:id/tabcontent"
+			android:layout_width="fill_parent" android:layout_height="fill_parent"
+			android:padding="5dp" />
+	</LinearLayout>
+</TabHost> @

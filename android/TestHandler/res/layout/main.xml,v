@@ -1,0 +1,37 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.12.08.09.13.26;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	da84cff4c364e09;
+filename	main.xml;
+
+
+desc
+@@
+
+
+1.1
+log
+@Handler
+@
+text
+@<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<Button android:id="@@+id/startbutton" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="StartButton" />
+	<Button android:id="@@+id/endbutton" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="EndButtom" />
+</LinearLayout>
+@

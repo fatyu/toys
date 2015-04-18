@@ -1,0 +1,40 @@
+!SESSION 2011-12-01 23:05:17.908 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.7.0_01
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2011-12-01 23:30:43.415
+!MESSAGE Failed to load properties file for project 'Helloworld'
+!SESSION 2011-12-11 20:40:03.899 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.7.0_01
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 4 4 2011-12-11 20:40:33.930
+!MESSAGE Plug-in 'webDevelopHelper' contributed an invalid Menu Extension (Path: 'webDeveloperhelperMenu' is invalid): tagbox.views.action.WebDeveloperHelperAction
+!SESSION 2011-12-17 10:26:11.005 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.7.0_01
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 4 4 2011-12-17 10:26:35.372
+!MESSAGE Plug-in 'webDevelopHelper' contributed an invalid Menu Extension (Path: 'webDeveloperhelperMenu' is invalid): tagbox.views.action.WebDeveloperHelperAction
+!SESSION 2011-12-17 11:15:13.216 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.7.0_01
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.ui 4 4 2011-12-17 11:15:19.724
+!MESSAGE Plug-in 'webDevelopHelper' contributed an invalid Menu Extension (Path: 'webDeveloperhelperMenu' is invalid): tagbox.views.action.WebDeveloperHelperAction

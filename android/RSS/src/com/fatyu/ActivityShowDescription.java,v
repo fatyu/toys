@@ -1,0 +1,73 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.1
+date	2010.12.08.09.11.28;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	eac4cff4bc04c87;
+filename	ActivityShowDescription.java;
+
+
+desc
+@@
+
+
+1.1
+log
+@rss reader
+@
+text
+@package com.fatyu;
+
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
+import android.content.Intent;
+import android.view.*;
+
+public class ActivityShowDescription extends Activity {
+	public void onCreate(Bundle icicle) {
+		super.onCreate(icicle);
+		setContentView(R.layout.showdescription);
+		String content = null;
+		Intent startingIntent = getIntent();
+
+		if (startingIntent != null) {
+			Bundle bundle = startingIntent
+					.getBundleExtra("android.intent.extra.rssItem");
+			if (bundle == null) {
+				content = "不好意思程序出错啦";
+			} else {
+				content = bundle.getString("title") + "\n\n"
+						+ bundle.getString("pubdate") + "\n\n"
+						+ bundle.getString("description").replace('\n', ' ')
+						+ "\n\n详细信息请访问以下网址:\n" + bundle.getString("link");
+			}
+		} else {
+			content = "不好意思程序出错啦";
+		}
+
+		TextView textView = (TextView) findViewById(R.id.content);
+		textView.setText(content);
+
+		Button backbutton = (Button) findViewById(R.id.back);
+
+		backbutton.setOnClickListener(new Button.OnClickListener() {
+			public void onClick(View v) {
+				finish();
+			}
+		});
+	}
+}
+
+@

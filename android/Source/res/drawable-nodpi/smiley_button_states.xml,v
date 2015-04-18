@@ -1,0 +1,51 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.12.08.09.12.15;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	a544cff4bef4d21;
+filename	smiley_button_states.xml;
+
+
+desc
+@@
+
+
+1.1
+log
+@É¨À×
+@
+text
+@<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" 
+    	  android:state_pressed="false" 
+    	  android:layout_width="48px"
+    	  android:layout_height="48px"
+    	  android:drawable="@@drawable/smile" />
+    	  
+    <item android:state_focused="true" 
+    	  android:state_pressed="true"
+    	  android:layout_width="48px"
+    	  android:layout_height="48px"
+    	  android:drawable="@@drawable/surprise" />
+    	  
+    <item android:state_focused="false" 
+    	  android:state_pressed="true"
+    	  android:layout_width="48px"
+    	  android:layout_height="48px"
+	      android:drawable="@@drawable/surprise" />
+	      
+    <item android:layout_width="48px"
+     	  android:layout_height="48px"
+    	  android:drawable="@@drawable/smile" />
+</selector>@

@@ -1,0 +1,31 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.12.08.09.10.54;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	ff84cff4b9d4c15;
+filename	MANIFEST.MF;
+
+
+desc
+@@
+
+
+1.1
+log
+@mp3web·þÎñ
+@
+text
+@Manifest-Version: 1.0
+Class-Path: 
+
+@

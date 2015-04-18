@@ -1,0 +1,44 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.1
+date	2010.12.08.09.14.07;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	cb04cff4c5e4e8b;
+filename	RateBarActivity.java;
+
+
+desc
+@@
+
+
+1.1
+log
+@widget
+@
+text
+@package com.fatyu;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class RateBarActivity extends Activity {
+
+	@@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setTitle("SeekBar");
+		setContentView(R.layout.ratebar);
+	}
+
+}
+@

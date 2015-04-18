@@ -1,0 +1,43 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.1
+date	2010.12.08.09.09.58;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	e2c4cff4b664b61;
+filename	ActivityMain.java;
+
+
+desc
+@@
+
+
+1.1
+log
+@Õº∆¨≤‚ ‘
+@
+text
+@package com.fatyu;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public class ActivityMain extends Activity {
+    /** Called when the activity is first created. */
+    @@Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+//        ImageView iv = new ImageView(this);
+//        iv.setImageResource(R.drawable.helloworld);
+//        setContentView(iv);
+    }
+}@

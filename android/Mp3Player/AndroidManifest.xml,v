@@ -1,0 +1,51 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.12.08.09.11.11;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	d2c4cff4baf4c50;
+filename	AndroidManifest.xml;
+
+
+desc
+@@
+
+
+1.1
+log
+@mp3²¥·ÅÆ÷.
+@
+text
+@<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.fatyu" android:versionCode="1" android:versionName="1.0">
+	<application android:icon="@@drawable/music" android:label="@@string/app_name">
+		<activity android:name=".activity.MainActivity"
+			android:label="@@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".activity.Mp3PlayerActivity"
+			android:label="@@string/app_name" />
+		<activity android:name=".activity.LocalMp3ListActivity"
+			android:label="@@string/app_name" />
+		<activity android:name=".activity.PlayActivity"
+			android:label="@@string/app_name" />
+		<service android:name=".service.DownloadMp3Service"></service>
+	</application>
+	<uses-sdk android:minSdkVersion="4" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+</manifest> @

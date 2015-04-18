@@ -1,0 +1,46 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.12.08.09.11.50;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	b7c4cff4bd64ccf;
+filename	main.xml;
+
+
+desc
+@@
+
+
+1.1
+log
+@share Parference
+@
+text
+@<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="AndroidShare" />
+	<TextView android:text="Name:" android:layout_width="fill_parent"
+		android:layout_height="wrap_content"></TextView>
+	<EditText android:text="Please input your name and password" android:id="@@+id/name"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"></EditText>
+	<TextView android:text="Password:" 
+		android:layout_width="fill_parent" android:layout_height="wrap_content"></TextView>
+	<EditText android:text="" android:id="@@+id/password"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:password="true"></EditText>
+</LinearLayout>
+@

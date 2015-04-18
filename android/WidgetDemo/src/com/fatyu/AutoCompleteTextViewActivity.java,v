@@ -1,0 +1,51 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.1
+date	2010.12.08.09.13.53;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	93c4cff4c514e61;
+filename	AutoCompleteTextViewActivity.java;
+
+
+desc
+@@
+
+
+1.1
+log
+@widget
+@
+text
+@package com.fatyu;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+
+public class AutoCompleteTextViewActivity extends Activity {
+	static final String[] langs = { "java", "ruby", "python", "groovy", "cpp",
+			"jython" ,"jgroovy","jruby","javaeye","c#","php"};
+
+	@@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setTitle("autoCompleteTextView");
+		setContentView(R.layout.autocomplete);
+
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, langs);
+		AutoCompleteTextView actx = (AutoCompleteTextView) findViewById(R.id.complete);
+		actx.setAdapter(adapter);
+	}
+
+}
+@

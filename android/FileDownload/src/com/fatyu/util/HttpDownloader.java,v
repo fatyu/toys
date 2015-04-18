@@ -1,0 +1,60 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@// @;
+
+
+1.1
+date	2010.12.08.09.09.45;	author Administrator;	state Exp;
+branches;
+next	;
+deltatype	text;
+kopt	kv;
+permissions	666;
+commitid	bf44cff4b584b34;
+filename	HttpDownloader.java;
+
+
+desc
+@@
+
+
+1.1
+log
+@ÎÄ¼þÏÂÔØ
+@
+text
+@package com.fatyu.util;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class HttpDownloader {
+
+	private URL url = null;
+	public String downFile(String file){
+		StringBuilder sb = new StringBuilder();
+		BufferedReader br = null;
+		String line = null;
+		try {
+			url = new URL(file);
+			HttpURLConnection huc = (HttpURLConnection) url.openConnection();
+			br =new BufferedReader(new InputStreamReader(huc.getInputStream())) ;
+			while((line=br.readLine())!=null){
+				System.out.println(line);
+				sb.append(line);
+			}
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return sb.toString();
+	}
+}
+@
